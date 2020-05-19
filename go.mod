@@ -1,4 +1,4 @@
-module bitbucket.org/welovetravel/backup
+module github.com/CoverGenius/backup
 
 go 1.12
 

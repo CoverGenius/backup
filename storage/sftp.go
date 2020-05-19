@@ -1,7 +1,7 @@
 package storage
 
 import (
-	"bitbucket.org/welovetravel/backup/base"
+	"github.com/CoverGenius/backup/base"
 )
 
 type SFTP struct {

@@ -1,7 +1,7 @@
 package helpers
 
 import (
-	"bitbucket.org/welovetravel/backup/base"
+	"github.com/CoverGenius/backup/base"
 	"github.com/sirupsen/logrus"
 	"time"
 )

@@ -1,7 +1,7 @@
 package splitter
 
 import (
-	"bitbucket.org/welovetravel/backup/base"
+	"github.com/CoverGenius/backup/base"
 )
 
 type Split struct {

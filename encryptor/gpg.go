@@ -1,7 +1,7 @@
 package encryptor
 
 import (
-	"bitbucket.org/welovetravel/backup/base"
+	"github.com/CoverGenius/backup/base"
 )
 
 type GPG struct {

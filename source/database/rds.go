@@ -1,8 +1,8 @@
 package database
 
 import (
-	"bitbucket.org/welovetravel/backup/base"
-	h "bitbucket.org/welovetravel/backup/helpers"
+	"github.com/CoverGenius/backup/base"
+	h "github.com/CoverGenius/backup/helpers"
 	"errors"
 	"fmt"
 	"github.com/aws/aws-sdk-go/aws"

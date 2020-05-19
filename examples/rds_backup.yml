@@ -1,0 +1,31 @@
+---
+name: "my-database-backup"
+backup:
+  type: rds
+  rds:
+    source:
+      region: eu-west1
+      account: 123456789
+      access_key: ABCDEFG
+      secret_access_key: zxcv5678
+      kms_key_id: 0000-1111-2222-3333
+    destination:
+      region: eu-west-2
+      account: 987654321
+      access_key: GFEDCBA
+      secret_access_key: abcd1234
+      kms_key_id: 4444-5555-6666-7777
+    db_instance_identifier: instance-identifier
+    db_snapshot_suffix: daily
+log_level: info
+notifier:
+  type:
+    - slack
+    - mail
+  slack:
+    webhook_url: 'https://hooks.slack.com/services/ABCD'
+    channel: '#mychannel'
+  mail:
+   from: backup@localhost
+   to: ops@example.com
+keep: 7

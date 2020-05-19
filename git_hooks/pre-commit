@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+go test -v ./...
+gofmt -l -s -w .

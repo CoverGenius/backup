@@ -36,7 +36,11 @@ func processConfig(p *string) *base.Config {
 		fmt.Println("No tmp directory defined! Using default one")
 		c.TmpDir = h.StringP("/tmp/backup")
 	}
-	h.RemoveDir(c.TmpDir)
+        if c.TmpDirCleanup != nil && *c.TmpDirCleanup == false {
+                h.Log.Info("Skip cleanup of temporary directory!")
+        } else {
+                h.RemoveDir(c.TmpDir)
+        }
 	os.Mkdir(*c.TmpDir, 0700)
 	h.Config = &c
 
@@ -242,7 +246,11 @@ func main() {
 	} else {
 		RunBackup(c)
 	}
-	h.RemoveDir(c.TmpDir)
+	if c.TmpDirCleanup != nil && *c.TmpDirCleanup == false {
+		h.Log.Info("Skip cleanup of temporary directory!")
+	} else {
+		h.RemoveDir(c.TmpDir)
+	}
 	c.Notifier.Status.EndTime = h.GetTimeNow()
 	c.Notifier.Status.CalculateDuration()
 	for _, n := range h.Notifiers {

@@ -223,6 +223,7 @@ type Config struct {
 	LogLevel         *string      `yaml:"log_level,omitempty"`
 	LogFile          *string
 	TmpDir           *string `yaml:"tmp_dir,omitempty"`
+	TmpDirCleanup    *bool   `yaml:"tmp_dir_cleanup,omitempty"`
 	ArchiverSuffix   *string
 	CompressorSuffix *string
 	EncryptorSuffix  *string

@@ -5,7 +5,7 @@
 
 
 Name: backup
-Version: 0.0.7
+Version: 0.0.8
 Release: 0%{?dist}
 Summary: Backup tool
 License: BSD
@@ -38,6 +38,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Sep 23 2020 Serghei Anicheev <serghei@covergenius.com>
+- Added a flag which does not delete tmp directory
 * Tue May 19 2020 Serghei Anicheev <serghei@covergenius.com>
 - Added MySQL source
 - Added restore logic
